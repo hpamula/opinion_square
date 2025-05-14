@@ -1,1 +1,1 @@
-# opinion_square
+🐢
