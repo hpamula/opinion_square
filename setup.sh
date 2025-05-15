@@ -10,6 +10,7 @@ cd backend
 # npm install
 npm install sqlite3
 # npm start
+# maybe mkdir models db controllers
 cd ..
 npm create vite@latest frontend -- --template react
 cd frontend
