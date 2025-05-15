@@ -1,0 +1,29 @@
+const PORT = 3000;
+
+// default:
+const app = require('../app');
+
+// ===== below commented app implementations with decreasing abstraction =====
+// minimal without using ../app file:
+// const app = require('express')().use('/', require('../routes/index'))
+
+// minimal without using ../app and routes/index.js files:
+// const app = require('express')().use(
+//   '/', require('express').Router().get('/', (req, res) => {
+//     res.sendFile(require('path').join(__dirname, '../public/index.html'))
+//   })
+// )
+
+// without using any files (node.js without express.js):
+// const app = (req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/html');
+//   res.end('<h1>Hello World:))</h1>\n');
+// }
+
+// below is optional if using express.js, but works as well:
+// const server = require('http').createServer(app);
+// server.listen(PORT, () => {
+app.listen(PORT, () => {
+  console.log(`Server listening on http://localhost:${PORT}`);
+});
