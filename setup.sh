@@ -8,7 +8,7 @@ sudo apt install nodejs npm
 
 # ==================== LOCAL BACKEND SETUP ====================
 # Execution flow: routes -> controllers -> services -> models -> config (database)
-mkdir backend && cd backend
+cd backend
 npm install express sqlite3 morgan
 # mkdir database
 node app.js
